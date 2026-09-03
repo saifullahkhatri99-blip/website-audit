@@ -1,0 +1,25 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Book",
+      "@id": "https://globalsalah.com/sahih-bukhari/#book",
+      "name": "Sahih al-Bukhari (الجامع المسند الصحيح المختصر من أمور رسول الله صلى الله عليه وسلم وسننه وأيامه)",
+      "alternateName": "Sahih Bukhari",
+      "author": {
+        "@type": "Person",
+        "name": "Imam Muhammad al-Bukhari",
+        "birthDate": "0810-07-19",
+        "deathDate": "0870-09-01"
+      },
+      "inLanguage": ["ar", "en", "ur"],
+      "genre": "Hadith Collection / Islamic Studies",
+      "description": "The most authentic compilation of Prophetic traditions in Sunni Islam, meticulously compiled by Imam Muhammad ibn Ismail al-Bukhari with full chains of transmission (Isnad).",
+      "url": "https://globalsalah.com/sahih-bukhari/",
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://globalsalah.com/#organization"
+      }
+    }
+  ]
+}
