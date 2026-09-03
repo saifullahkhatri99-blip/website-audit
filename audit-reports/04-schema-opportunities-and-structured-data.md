@@ -3,7 +3,7 @@
 > [!IMPORTANT]
 > Schema Markup (JSON-LD) is one of the highest leverage growth opportunities for **Global Salah**.  
 > Currently, the website only leverages basic generic schemas (`Organization`, `WebSite`, `WebPage`, `BreadcrumbList`, and generic `FAQPage`).  
-> Implementing the specialized schemas outlined below will qualify Global Salah for **Google Rich Snippets, Web App badges, Local Knowledge Graph cards, Event Carousels, and Audio Recitation Rich Cards**.
+> Implementing the specialized schemas outlined below will qualify Global Salah for **Google Rich Snippets, Web App badges, Local Knowledge Graph cards, Event Carousels, Dataset / PDF Download Rich Cards, and Audio Recitation Rich Cards**.
 
 ---
 
@@ -12,7 +12,7 @@
 | Page Type / Feature | Existing Schema | Recommended High-Impact Schema Opportunities | Google SERP Enhancement |
 | :--- | :--- | :--- | :--- |
 | **Interactive Calculators & Tools** (`/zakat-calculator/`, `/inheritance-calculator/`, `/qaza-namaz-calculator/`, `/qibla-finder/`, `/prayer-tracker/`, `/islamic-date-converter/`) | Basic `WebPage` | `WebApplication` / `SoftwareApplication` + `ItemPage` | Google Web App badge, rich interactive calculator snippet, direct CTR boost |
-| **City Prayer Time Pages** (`/countries/pakistan/karachi/`, etc. across 1,109 cities) | `WebPage`, `BreadcrumbList`, `FAQPage` | `Place` / `City` schema with `geo: GeoCoordinates` & `containedInPlace` | Geographic entity linking, Local SERP dominance for *"{city} prayer times"* queries |
+| **City Prayer Time Pages** (`/countries/pakistan/karachi/`, etc. across 1,109 cities) | `WebPage`, `BreadcrumbList`, `FAQPage` | `Place` / `City` + `Dataset` with **`DataDownload` (Monthly Timetable PDF)** & `GeoCoordinates` | Local SERP dominance, Google Dataset Search, direct PDF download button in SERP |
 | **Quran Reader & Surahs** (`/quran/`) | `WebPage`, `BreadcrumbList` | `Book` / `CreativeWork` + `AudioObject` (for verse/surah audio recitations) | Voice search eligibility, Audio rich player preview in Google SERP |
 | **Hadith Collections** (`/sahih-bukhari/`, `/sahih-muslim/`, `/jamia-tirmazi/`, etc.) | `CollectionPage`, `FAQPage` | `Book` / `CreativeWorkSeries` with `author: Person`, `workExample: DigitalDocument (PDF)` | Scholarly authority entity recognition in Google Knowledge Graph |
 | **Special Islamic Days** (`/special-islamic-days/ramadan-2027/`, `/eid-al-fitr-2027/`, etc.) | Generic `WebPage` | `Event` schema (`eventStatus`, `startDate`, `endDate`, `eventAttendanceMode`) | Google Events rich carousel, countdown rich snippets |
@@ -53,7 +53,7 @@
 
 ---
 
-### 2. City Prayer Schedule Schema (`Place` & `GeoCoordinates`)
+### 2. City Prayer Schedule with Monthly Timetable PDF Download (`Place` + `Dataset` + `DataDownload`)
 
 **Target URLs:** All 1,109+ city pages (e.g. `https://globalsalah.com/countries/pakistan/karachi/`)
 
@@ -68,6 +68,7 @@
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Karachi",
+        "addressRegion": "Sindh",
         "addressCountry": "PK"
       },
       "geo": {
@@ -77,17 +78,42 @@
       },
       "containedInPlace": {
         "@type": "Country",
-        "name": "Pakistan"
+        "name": "Pakistan",
+        "identifier": "PK"
       }
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://globalsalah.com/countries/pakistan/karachi/#timetable-dataset",
+      "name": "Karachi Monthly Prayer Timetable Schedule",
+      "description": "Monthly Islamic prayer timetable dataset for Karachi, Pakistan covering Fajr, Sunrise, Dhuhr, Asr, Maghrib, and Isha with Hanafi and Shafi calculation options.",
+      "license": "https://globalsalah.com/terms-and-conditions/",
+      "spatialCoverage": {
+        "@id": "https://globalsalah.com/countries/pakistan/karachi/#place"
+      },
+      "distribution": [
+        {
+          "@type": "DataDownload",
+          "name": "Karachi Prayer Times - September 2026 PDF",
+          "encodingFormat": "application/pdf",
+          "contentUrl": "https://globalsalah.com/downloads/pakistan/karachi/karachi-prayer-times-september-2026.pdf"
+        }
+      ]
     },
     {
       "@type": "WebPage",
       "@id": "https://globalsalah.com/countries/pakistan/karachi/#webpage",
       "url": "https://globalsalah.com/countries/pakistan/karachi/",
       "name": "Prayer Times in Karachi, Pakistan | Global Salah",
-      "description": "Accurate daily Salah timetable for Karachi, Pakistan including Fajr, Sunrise, Dhuhr, Asr, Maghrib and Isha with Hanafi & Shafi calculation methods.",
+      "description": "Accurate daily Salah timetable for Karachi, Pakistan including Fajr, Sunrise, Dhuhr, Asr, Maghrib and Isha with Hanafi & Shafi calculation methods and downloadable monthly PDF.",
       "about": {
         "@id": "https://globalsalah.com/countries/pakistan/karachi/#place"
+      },
+      "mainEntity": {
+        "@id": "https://globalsalah.com/countries/pakistan/karachi/#timetable-dataset"
+      },
+      "publisher": {
+        "@id": "https://globalsalah.com/#organization"
       }
     }
   ]
@@ -161,7 +187,7 @@
 {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
-  "@id": "https://globalsalah.com/quran/#quran",
+  "@id": "https://globalsalah.com/quran/#scripture",
   "name": "The Holy Quran (القرآن الكريم)",
   "inLanguage": ["ar", "en", "ur"],
   "genre": "Islamic Sacred Scripture",
@@ -212,5 +238,6 @@
 ## 📈 Projected Impact of Implementing Recommended Schemas
 
 1. **Rich Results Eligibility:** +40% higher click-through rate (CTR) on SERPs compared to plain blue link listings.
-2. **Local Voice Assistant Integration:** Enabling Siri, Google Assistant, and Alexa to answer *"What time is Fajr in Karachi today?"* through structured `Place` + timetable entity mapping.
-3. **Google Discover & Knowledge Graph Placement:** Recognized as an authoritative entity for Islamic scholarship and utilities.
+2. **Direct PDF Download Snippets:** Searchers looking for *"Karachi prayer times PDF download"* get direct Google download button rich cards.
+3. **Local Voice Assistant Integration:** Enabling Siri, Google Assistant, and Alexa to answer *"What time is Fajr in Karachi today?"* through structured `Place` + timetable entity mapping.
+4. **Google Discover & Knowledge Graph Placement:** Recognized as an authoritative entity for Islamic scholarship and utilities.
