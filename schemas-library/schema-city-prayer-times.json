@@ -23,6 +23,24 @@
       }
     },
     {
+      "@type": "Dataset",
+      "@id": "https://globalsalah.com/countries/pakistan/karachi/#timetable-dataset",
+      "name": "Karachi Monthly Prayer Timetable Schedule",
+      "description": "Monthly Islamic prayer timetable dataset for Karachi, Pakistan covering Fajr, Sunrise, Dhuhr, Asr, Maghrib, and Isha with Hanafi and Shafi calculation options.",
+      "license": "https://globalsalah.com/terms-and-conditions/",
+      "spatialCoverage": {
+        "@id": "https://globalsalah.com/countries/pakistan/karachi/#place"
+      },
+      "distribution": [
+        {
+          "@type": "DataDownload",
+          "name": "Karachi Prayer Times - September 2026 PDF",
+          "encodingFormat": "application/pdf",
+          "contentUrl": "https://globalsalah.com/downloads/pakistan/karachi/karachi-prayer-times-september-2026.pdf"
+        }
+      ]
+    },
+    {
       "@type": "WebPage",
       "@id": "https://globalsalah.com/countries/pakistan/karachi/#webpage",
       "url": "https://globalsalah.com/countries/pakistan/karachi/",
@@ -34,6 +52,9 @@
       },
       "about": {
         "@id": "https://globalsalah.com/countries/pakistan/karachi/#place"
+      },
+      "mainEntity": {
+        "@id": "https://globalsalah.com/countries/pakistan/karachi/#timetable-dataset"
       },
       "publisher": {
         "@id": "https://globalsalah.com/#organization"
@@ -87,6 +108,14 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "The University of Islamic Sciences, Karachi (18° Fajr, 18° Isha) and the Hanafi Asr method are predominantly followed in Karachi and across Pakistan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I download a monthly prayer timetable PDF for Karachi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can download the complete 30-day monthly prayer timetable PDF for Karachi directly from the download section on this page."
           }
         }
       ]
