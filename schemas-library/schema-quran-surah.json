@@ -1,0 +1,35 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CreativeWork",
+      "@id": "https://globalsalah.com/quran/#scripture",
+      "name": "The Holy Quran (القرآن الكريم)",
+      "alternateName": "Al-Quran Al-Kareem",
+      "inLanguage": ["ar", "en", "ur", "fr", "de", "es", "tr", "ru", "pt", "zh-CN"],
+      "genre": "Islamic Holy Scripture",
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://globalsalah.com/#organization"
+      }
+    },
+    {
+      "@type": "Chapter",
+      "@id": "https://globalsalah.com/quran/surah-al-fatiha/#chapter",
+      "name": "Surah Al-Fatiha (The Opening - سورة الفاتحة)",
+      "position": 1,
+      "numberOfPages": 1,
+      "isPartOf": {
+        "@id": "https://globalsalah.com/quran/#scripture"
+      },
+      "audio": {
+        "@type": "AudioObject",
+        "@id": "https://globalsalah.com/quran/surah-al-fatiha/#audio",
+        "name": "Surah Al-Fatiha Complete Audio Recitation (Mishary Rashid Alafasy)",
+        "contentUrl": "https://globalsalah.com/assets/audio/quran/001.mp3",
+        "encodingFormat": "audio/mpeg",
+        "inLanguage": "ar"
+      }
+    }
+  ]
+}
