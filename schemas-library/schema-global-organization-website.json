@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://globalsalah.com/#organization",
+      "name": "Global Salah",
+      "url": "https://globalsalah.com/",
+      "description": "Global Salah provides authentic and verified Islamic prayer times, Qibla compass bearing, Quran with audio recitation, Hadith collections, and Hijri calendar tools for over 1 million cities.",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://globalsalah.com/#logo",
+        "url": "https://globalsalah.com/assets/images/global-salah-full-logo.png",
+        "width": 720,
+        "height": 180,
+        "caption": "Global Salah Logo"
+      },
+      "image": {
+        "@id": "https://globalsalah.com/#logo"
+      },
+      "sameAs": [
+        "https://www.facebook.com/globalsalah",
+        "https://twitter.com/globalsalah",
+        "https://www.instagram.com/globalsalah",
+        "https://www.youtube.com/@globalsalah"
+      ],
+      "knowsLanguage": [
+        "en", "ar", "de", "es", "fr", "pt", "ru", "tr", "ur", "zh-CN"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://globalsalah.com/#website",
+      "url": "https://globalsalah.com/",
+      "name": "Global Salah",
+      "publisher": {
+        "@id": "https://globalsalah.com/#organization"
+      },
+      "inLanguage": [
+        "en", "ar", "de", "es", "fr", "pt", "ru", "tr", "ur", "zh-CN"
+      ],
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://globalsalah.com/countries/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+  ]
+}
