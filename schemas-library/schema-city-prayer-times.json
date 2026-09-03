@@ -1,0 +1,95 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Place",
+      "@id": "https://globalsalah.com/countries/pakistan/karachi/#place",
+      "name": "Karachi",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Karachi",
+        "addressRegion": "Sindh",
+        "addressCountry": "PK"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 24.8607,
+        "longitude": 67.0011
+      },
+      "containedInPlace": {
+        "@type": "Country",
+        "name": "Pakistan",
+        "identifier": "PK"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://globalsalah.com/countries/pakistan/karachi/#webpage",
+      "url": "https://globalsalah.com/countries/pakistan/karachi/",
+      "name": "Prayer Times in Karachi, Pakistan | Global Salah",
+      "description": "Check today's Fajr, Sunrise, Dhuhr, Asr, Maghrib and Isha times for Karachi, Pakistan, with timezone, calculation methods and monthly downloadable PDF schedule.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://globalsalah.com/#website"
+      },
+      "about": {
+        "@id": "https://globalsalah.com/countries/pakistan/karachi/#place"
+      },
+      "publisher": {
+        "@id": "https://globalsalah.com/#organization"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://globalsalah.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Countries",
+          "item": "https://globalsalah.com/countries/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Pakistan",
+          "item": "https://globalsalah.com/countries/pakistan/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Karachi",
+          "item": "https://globalsalah.com/countries/pakistan/karachi/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://globalsalah.com/countries/pakistan/karachi/#faq",
+      "inLanguage": "en",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are today's prayer times in Karachi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Today's Salah timetable for Karachi is calculated using Karachi's official coordinates (24.8607° N, 67.0011° E) with University of Islamic Sciences, Karachi calculation convention for Fajr and Isha, and Hanafi/Shafi Asr methods."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which calculation method is recommended for Karachi, Pakistan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The University of Islamic Sciences, Karachi (18° Fajr, 18° Isha) and the Hanafi Asr method are predominantly followed in Karachi and across Pakistan."
+          }
+        }
+      ]
+    }
+  ]
+}
