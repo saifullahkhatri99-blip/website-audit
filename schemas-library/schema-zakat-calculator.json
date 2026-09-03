@@ -1,0 +1,36 @@
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "@id": "https://globalsalah.com/zakat-calculator/#app",
+  "name": "Global Salah Online Zakat Calculator",
+  "url": "https://globalsalah.com/zakat-calculator/",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "browserRequirements": "Requires JavaScript. Requires HTML5.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "description": "Accurately calculate your Zakat obligations for cash, gold, silver, business inventory, investments, and shares according to Islamic Shariah Nisab thresholds.",
+  "inLanguage": "en",
+  "featureList": [
+    "Gold & Silver Nisab Calculator",
+    "Cash and Bank Balance Deduction",
+    "Real-time Currency Conversion",
+    "Business Inventory and Share Portfolio Valuation",
+    "Liabilities and Immediate Debt Deductions"
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://globalsalah.com/#organization",
+    "name": "Global Salah",
+    "url": "https://globalsalah.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://globalsalah.com/assets/images/global-salah-full-logo.png",
+      "width": 720,
+      "height": 180
+    }
+  }
+}
